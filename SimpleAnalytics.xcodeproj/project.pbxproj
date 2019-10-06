@@ -37,6 +37,7 @@
 		55355E902347863300903323 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		55355E92234786FF00903323 /* AddProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProperty.swift; sourceTree = "<group>"; };
 		553C82C1234A1C0E00901625 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		553C82C3234A1F4200901625 /* SimpleAnalytics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleAnalytics.entitlements; sourceTree = "<group>"; };
 		555F9E4A23436BF200E6DF9F /* SimpleAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555F9E4D23436BF200E6DF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555F9E4F23436BF200E6DF9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		555F9E4C23436BF200E6DF9F /* SimpleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				553C82C3234A1F4200901625 /* SimpleAnalytics.entitlements */,
 				5577A38623478CB20047CF6A /* Components */,
 				55355E8F2347862000903323 /* Wrappers */,
 				55355E8A23475C5D00903323 /* Data */,
@@ -457,7 +459,9 @@
 			baseConfigurationReference = 37A0A6C20FCF6B2C61BBA5CE /* Pods-SimpleAnalytics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleAnalytics/SimpleAnalytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleAnalytics/Preview Content\"";
 				DEVELOPMENT_TEAM = H78GYE72WQ;
 				ENABLE_PREVIEWS = YES;
@@ -468,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techulus.SimpleAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,7 +483,9 @@
 			baseConfigurationReference = B06B3F5A67795FCCA9C95D53 /* Pods-SimpleAnalytics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleAnalytics/SimpleAnalytics.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleAnalytics/Preview Content\"";
 				DEVELOPMENT_TEAM = H78GYE72WQ;
 				ENABLE_PREVIEWS = YES;
@@ -489,6 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techulus.SimpleAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
