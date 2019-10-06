@@ -34,7 +34,7 @@ struct DetailView: View {
                         
                         if (self.store.loading) {
                             ActivityIndicator(isAnimating: $store.loading, style: .medium)
-                                .padding()
+                                .padding(.top)
                         } else {
                             Text("\(self.store.stats.pageviews)")
                                 .font(.largeTitle)

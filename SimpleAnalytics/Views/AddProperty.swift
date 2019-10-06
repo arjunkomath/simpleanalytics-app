@@ -17,16 +17,17 @@ struct AddProperty: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Button(action: {
                 self.presentation.wrappedValue.dismiss();
             }) {
                 Text("Done")
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, alignment: .trailing)
-            .padding(.top)
+            .padding(.horizontal)
             
             Form {
-                Section(header: Text("New Property")) {
+                Section(header: Text("Add new property")) {
                     Text("Enter Property URL")
                         .bold()
                     

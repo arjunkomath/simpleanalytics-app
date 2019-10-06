@@ -24,7 +24,7 @@ let settings = UserSettings()
 final class AppStore: ObservableObject {
     private var propertyUrl: String
     
-    var dateRange: Int = 0 {
+    var dateRange: Int = 1 {
         didSet {
             self.fetchData()
         }
