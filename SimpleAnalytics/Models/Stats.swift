@@ -23,7 +23,7 @@ struct Visit: Codable, Hashable {
 
 struct Agent: Codable, Hashable {
     let count: Int
-    let browser_name: String?
+    let browser_name: String
     let browser_version: String?
     let os_name: String?
     let os_version: String?

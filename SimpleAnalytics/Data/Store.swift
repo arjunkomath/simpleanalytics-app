@@ -78,6 +78,12 @@ final class AppStore: ObservableObject {
         self.propertyUrl = url
     }
     
+    func getAgents() -> [Agent] {
+        return stats.agents.filter { agent in
+            agent.browser_name.isEmpty == false
+        }
+    }
+    
     func fetchData() {
         self.resetData()
         
@@ -97,7 +103,6 @@ final class AppStore: ObservableObject {
         
         let queryString = "start=\(start_date.toFormat("yyyy-MM-dd"))&end=\(end_date)"
         let dataUrl = "https://simpleanalytics.com/\(self.propertyUrl).json?\(queryString)"
-//        print(dataUrl)
         
         APIClient.getStats(route: dataUrl) { (result) in
             self.loading = false
@@ -130,7 +135,7 @@ final class AppStore: ObservableObject {
                                label: "\(agent.count)",
                         legend: Legend(
                             color: barColors[index],
-                            label: "\(agent.browser_name ?? "")"
+                            label: "\(agent.browser_name)"
                         )
                     )
                 }

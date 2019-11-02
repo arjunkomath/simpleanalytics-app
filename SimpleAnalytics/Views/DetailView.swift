@@ -62,6 +62,9 @@ struct DetailView: View {
                         } else {
                             BarChartView(bars: self.store.agentBars, chartType: .vertical, labelsCount: self.store.agentBars.count)
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 250, maxHeight: 250, alignment: .leading)
+                            NavigationLink(destination: BrowsersDetail().environmentObject(store)) {
+                                Text("View all")
+                            }
                         }
                     }
                     .padding(.horizontal)
