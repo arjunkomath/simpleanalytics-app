@@ -15,12 +15,14 @@ struct MasterView: View {
     
     var body: some View {
         List {
-            ForEach(store.properties, id: \.self) { propertyUrl in
-                NavigationLink(destination: DetailView(propertyUrl: propertyUrl)) {
-                    Text(propertyUrl)
+            Section(header: Text("All")) {
+                ForEach(store.properties, id: \.self) { propertyUrl in
+                    NavigationLink(destination: DetailView(propertyUrl: propertyUrl)) {
+                        Text(propertyUrl)
+                    }
                 }
+                .onDelete(perform: delete)
             }
-            .onDelete(perform: delete)
         }
         .navigationBarTitle("Properties")
         .navigationBarItems(trailing:
